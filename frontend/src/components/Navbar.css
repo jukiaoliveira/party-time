@@ -1,0 +1,13 @@
+#navbar {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    margin-bottom: 1rem;
+    background-color: #d6d1c4;
+}
+
+#navbar h2 {
+    color: #55644a;
+    font-weight: 900;
+}
