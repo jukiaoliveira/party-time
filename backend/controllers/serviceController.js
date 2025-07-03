@@ -27,21 +27,40 @@ const serviceController = {
       console.log(error);
     }
   },
-  get: async(req, res) => {
+  get: async (req, res) => {
     try {
-        const id = req.params.id;
-        const service = await ServiceModel.findById(id)
+      const id = req.params.id;
+      const service = await ServiceModel.findById(id);
 
-        if (!serivice) {
-            res.status(404).json({ msg: "Serviço não encontrado!" });
-            return;
-        }
+      if (!service) {
+        res.status(404).json({ msg: "Serviço não encontrado!" });
+        return;
+      }
 
-        res.json(service);
+      res.json(service);
     } catch (error) {
-        console.log(error);
+      console.log(error);
     }
-  }
+  },
+  delete: async (req, res) => {
+    try {
+      const id = req.params.id;
+      const service = await ServiceModel.findById(id);
+
+      if (!service) {
+        res.status(404).json({ msg: "Serviço não encontrado!" });
+        return;
+      }
+
+      const deletedService = await ServiceModel.findByIdAndDelete(id);
+
+      res
+        .status(200)
+        .json({ deletedService, msg: "Serviço excluído com sucesso!" });
+    } catch (error) {
+      console.log(error);
+    }
+  },
 };
 
 module.exports = serviceController;
