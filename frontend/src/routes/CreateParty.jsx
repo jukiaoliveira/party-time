@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 
 import { useNavigate } from "react-router-dom";
 
+import "./Form.css";
+
 const CreateParty = () => {
   const [services, setServices] = useState([]);
 
@@ -63,8 +65,8 @@ const CreateParty = () => {
                 <div className="service" key={service._id}>
                   <img src={service.image} alt={service.name} />
                   <p className="service-name">{service.name}</p>
-                  <p className="service-price">{service.price}</p>
-                  <div className="checkbox-containter">
+                  <p className="service-price">R$ {service.price}</p>
+                  <div className="checkbox-container">
                     <input type="checkbox" value={service._id} />
                     <p>Marque para solicitar</p>
                   </div>
