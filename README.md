@@ -8,14 +8,14 @@ Atualmente, o sistema conta com um **CRUD básico** de eventos: criação, ediç
 ## 🚀 Tecnologias Utilizadas
 
 ### 💻 Front-end
-- [React](https://reactjs.org/)
+- React
 - JavaScript
 - CSS3
 
 ### 🔧 Back-end
-- [Node.js](https://nodejs.org/)
-- [Express](https://expressjs.com/)
-- [MongoDB](https://www.mongodb.com/)
+- Node.js
+- Express
+- MongoDB
 - Mongoose (ODM)
 
 ---
