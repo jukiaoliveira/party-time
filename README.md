@@ -53,6 +53,7 @@ npm start
 ---
 
 📁 Estrutura do Projeto (resumo)
+```bash
 party-time/
 ├── backend/
 │   ├── models/
@@ -65,3 +66,4 @@ party-time/
 │   │   ├── components/
 │   │   ├── pages/
 │   │   └── App.js
+```
